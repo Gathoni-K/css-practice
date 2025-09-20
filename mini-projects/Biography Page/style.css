@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  color: #e025d7;
+  font-size: 2rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-decoration:  underline dotted;
+  text-decoration-thickness: 10px;
+  text-decoration-color: #56007d;
+  
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+.job-title {
+  color: #999999;
+  font-weight: bold;
+}
+
+a:link,
+a:visited {
+  color: #fb6542;
+}
+
+a:hover {
+  text-decoration: none;
+}
+.personal-information{
+    border: solid 5px #56007d;
+    width: 45%;
+    background-color:#f7f7f7;
+}
+#email{
+    color: green;
+}

@@ -1,0 +1,82 @@
+\/* General page styles */
+
+/* Specificity calculations:
+   .card article img = 0,0,3,0 (3 classes, 1 element)
+   .card footer = 0,0,2,0 (2 classes)
+   .card header = 0,0,2,0 (2 classes)
+   .card = 0,0,1,0 (1 class)
+*/
+
+/* General styles - put these straight into your stylesheet */
+body {
+    margin: 0;
+}
+
+html {
+    font-family: 'Helvetica neue', Arial, 'sans serif';
+    font-size: 10px;
+    background-color: #ccc;
+}
+
+/* Styles for the card container setup */
+.card {
+    width: 35em;
+    height: 22em;
+    margin: 5em auto;
+    background-color: red; /* Fixed: was "background-colour" */
+    border: 0.2em solid black;
+    border-radius: 1.5em;
+}
+
+/* Styles for the header and footer */
+.card header {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0));
+    border-radius: 1.5em 1.5em 0 0;
+}
+
+.card footer {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.1));
+    border-radius: 0 0 1.5em 1.5em;
+}
+
+/* Styles for the main business card contents */
+.card article img {
+    max-height: 100%;
+    float: right;
+}
+
+
+/* Header and footer height - 50px total (30px content + 10px padding on all sides) */
+.card footer,
+.card header {
+    height: 5em; /* 50px / 10px base = 5em */
+}
+
+/* Remove default margins from h2 and p elements */
+h2, p {
+    margin: 0;
+}
+
+/* Article height and background */
+.card article {
+    height: 12em; /* 120px / 10px base = 12em */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+}
+
+/* H2 styling - 20px font size with centered line height */
+h2 {
+    font-size: 2em; /* 20px / 10px base = 2em */
+    line-height: 1.5; /* 30px / 20px = 1.5 */
+}
+
+/* Footer paragraph styling - 15px font size with centered line height */
+.card footer p {
+    font-size: 1.5em; /* 15px / 10px base = 1.5em */
+    line-height: 2; /* 30px / 15px = 2 */
+}
+
+/* Article paragraph styling */
+.card article p {
+    padding: 1em; /* Appropriate padding for alignment */
+    color: #f0f0f0; /* Light color for readability */
+}

@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+/*makes the body 1 screen size tall*/
+    display: grid;
+    grid-template-columns: 300px 1fr;
+/*gives 2 columns that take up the entire website's width*/
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "navbar navbar"
+    "sidebar main"
+    "sidebar footer";
+
+/*at this point there is still no change in our layout, these names have no meaning yet*/
+
+}
+nav{
+    grid-area: navbar;
+    background-color: blue;
+    padding: 1em;
+    color: white;
+    position: sticky;
+/*the navbar will scroll with us*/
+    top: 0;
+/*the navbar is stuck at 0px away from top edge of the screen*/
+}
+aside{
+    grid-area: sidebar;
+    background-color: grey;
+    position: sticky;
+    top: 50.4px;
+/*
+-find the height of the navbar from Browser Developer Tools*/
+    height: calc(100vh - 50.4px);
+/*minus the height of the navbar to give it allowance
+-there aside does nto shrink or grow with the screen, to fix that, use media queries*/
+    align-self: start;
+}
+main{
+    grid-area: main;
+}
+footer{
+    grid-area: footer;
+}
+
+@media(max-width: 800px) {
+/*when the screen size of the device is smaller than 800px, the following styles
+are changed
+*/
+body{
+    grid-template-columns: 1fr;
+/*there is only one column*/
+}
+aside{
+    position: fixed;
+/*will place the element onto another stacking context */
+    width: 300px;
+    display: none;
+/*setting our navbar to be able to pop up and hide the rest of our website*/
+}
+    .show{
+        display:block;
+    }
+}
+
+/*
+'grid-template-areas' - define our exact layout
+'grid-area : name' - gives meaning to layout defines*/

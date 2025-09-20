@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    background-color: rgb(255, 107, 107);
+    position: relative;
+    padding: 20px;
+}
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+.nav-bar .nav-links{
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+ul li a{
+    text-decoration: none;
+    color: blue;
+    font-size: 1.5em;
+}
+
+input::placeholder{
+    font-style: italic;
+}
+.nav-bar input[type=text] {
+  padding: 16px;
+  border: none;
+  font-size: 17px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 4px; /* Optional: rounded corners */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: 200px 1fr;;
+}
+.aside{
+    background-color:rgb(168, 255, 255);
+    padding-left: 15px;
+}
+aside li{
+    list-style: none;
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+/*sets 2 equal columns for the items*/
+    gap: 10px;
+    grid-template-rows: auto auto auto;
+/*defines 3 rows for our items*/
+    margin-left: 10px;
+}
+main .item1{
+    background-color: red;
+    grid-column: 1/-1;
+    padding: 15px;
+}
+main .item2{
+    background-color: green;
+    grid-column: 1;
+/*sets it to the first column within main*/
+    padding: 15px;
+   
+}
+main .item3{
+    background-color: blue;
+    grid-column: 2;
+    padding: 15px;
+}
+main .item4{
+    background-color: yellow;
+    grid-column: 1/-1;
+    padding: 15px;
+}
+footer{
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
